@@ -262,3 +262,22 @@ label { display: block; margin-bottom: .35rem; font-weight: 600; color: #33414f;
   .hero video { display: none; }
   .hero .hero-fallback { display: block; }
 }
+
+.page-hero {
+  background: linear-gradient(180deg, rgba(31,45,61,.1), rgba(31,45,61,.03));
+  border-bottom: 1px solid rgba(31,45,61,.08);
+}
+
+.page-hero .container { padding: clamp(2rem, 5vw, 3.5rem) 0; }
+
+.list-clean {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.list-clean li { margin-bottom: .45rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-up { opacity: 1; transform: none; transition: none; }
+}
