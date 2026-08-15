@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f1eb" />
+    <title>Attune — A calmer way through hard conversations</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Attune home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>attune</span>
+        </a>
+        <div class="session-meta">
+          <span class="privacy"><i></i> Private session</span>
+          <span class="divider"></span>
+          <span id="sessionClock">04:32</span>
+          <button class="menu-button" aria-label="Open menu"><span></span><span></span><span></span></button>
+        </div>
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow"><span></span> Live conversation</p>
+        <h1>Let’s slow this down, <em>together.</em></h1>
+        <p>Attune listens for what’s said—and what’s felt—so you can understand each other more clearly.</p>
+      </section>
+
+      <section class="conversation" aria-label="Live conversation transcript">
+        <article class="speaker-card speaker-one">
+          <div class="speaker-head">
+            <div class="identity"><span class="avatar avatar-one">M</span><div><strong>Maya</strong><span>Speaking</span></div></div>
+            <div class="tone-badge"><i></i> Feeling unheard</div>
+          </div>
+          <blockquote>“I’m not asking you to fix everything. I just want to feel like you’re actually here with me when I’m talking.”</blockquote>
+          <div class="waveform" aria-label="Maya audio waveform">
+            <span style="--h:18%"></span><span style="--h:42%"></span><span style="--h:30%"></span><span style="--h:68%"></span><span style="--h:46%"></span><span style="--h:88%"></span><span style="--h:56%"></span><span style="--h:94%"></span><span style="--h:62%"></span><span style="--h:78%"></span><span style="--h:48%"></span><span style="--h:70%"></span><span style="--h:40%"></span><span style="--h:58%"></span><span style="--h:32%"></span><span style="--h:24%"></span><span style="--h:16%"></span>
+          </div>
+        </article>
+
+        <article class="insight-card">
+          <div class="insight-icon" aria-hidden="true">✦</div>
+          <div class="insight-copy">
+            <div class="insight-label">What might be underneath</div>
+            <p>Maya may be looking for <strong>presence and reassurance</strong>, not a solution.</p>
+          </div>
+          <button class="help-button" aria-label="About this insight">?</button>
+        </article>
+
+        <article class="speaker-card speaker-two">
+          <div class="speaker-head">
+            <div class="identity"><span class="avatar avatar-two">J</span><div><strong>Jamie</strong><span>Listening</span></div></div>
+            <div class="tone-badge neutral"><i></i> Processing</div>
+          </div>
+          <blockquote>“I hear you. I think I jump into problem-solving because I don’t know what else to do, and I’m scared I’ll say the wrong thing.”</blockquote>
+        </article>
+      </section>
+
+      <section class="coach-card">
+        <div class="coach-top">
+          <div><p class="eyebrow"><span></span> A gentle nudge</p><h2>Try reflecting before responding</h2></div>
+          <button class="dismiss" aria-label="Dismiss suggestion">×</button>
+        </div>
+        <p class="suggestion">“It sounds like you need me to be present with you right now, not solve it. Is that right?”</p>
+        <div class="coach-actions">
+          <button class="try-button"><span>↗</span> I’ll try this</button>
+          <button class="another-button">Show another <span>→</span></button>
+        </div>
+      </section>
+
+      <footer class="controls">
+        <div class="listening-state"><span class="pulse-ring"><i></i></span><div><strong>Listening together</strong><small>Both voices are being heard</small></div></div>
+        <div class="control-actions">
+          <button class="round-button" id="muteButton" aria-label="Mute microphone">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3Zm-7 9a7 7 0 0 0 14 0M12 19v3M8 22h8"/></svg>
+          </button>
+          <button class="end-button" id="endButton"><span></span> End session</button>
+          <button class="round-button pause-button" id="pauseButton" aria-label="Pause listening"><span></span><span></span></button>
+        </div>
+        <p class="security"><span>⌾</span> Audio is encrypted and never stored</p>
+      </footer>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
